@@ -28,6 +28,9 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Smooth scrolling for navigation links
   setupSmoothScrolling();
+  
+  // Initialize interactive elements
+  setupInteractiveElements();
 });
 
 // Enter button click - transition from intro to resume
@@ -46,6 +49,11 @@ enterButton.addEventListener('click', function() {
       resumeSection.classList.add('active');
     }, 100);
   }, 500);
+  
+  // Remove clicked class after animation
+  setTimeout(() => {
+    enterButton.classList.remove('clicked');
+  }, 300);
 });
 
 // Theme toggle
@@ -103,14 +111,65 @@ function setupSmoothScrolling() {
   });
 }
 
-// Add hover effects to project cards and other interactive elements
-const projectCards = document.querySelectorAll('.project-card');
-projectCards.forEach(card => {
-  card.addEventListener('mouseenter', function() {
-    this.style.transform = 'translateY(-10px)';
+// Setup interactive elements with hover effects and animations
+function setupInteractiveElements() {
+  // Project cards hover effect
+  const projectCards = document.querySelectorAll('.project-card');
+  projectCards.forEach(card => {
+    card.addEventListener('mouseenter', function() {
+      this.style.transform = 'translateY(-10px)';
+    });
+    
+    card.addEventListener('mouseleave', function() {
+      this.style.transform = 'translateY(0)';
+    });
   });
   
-  card.addEventListener('mouseleave', function() {
-    this.style.transform = 'translateY(0)';
+  // Education item hover effect
+  const educationItems = document.querySelectorAll('.education-item');
+  educationItems.forEach(item => {
+    item.addEventListener('mouseenter', function() {
+      this.style.borderLeftWidth = '8px';
+    });
+    
+    item.addEventListener('mouseleave', function() {
+      this.style.borderLeftWidth = '4px';
+    });
+  });
+  
+  // Extra items hover effect
+  const extraItems = document.querySelectorAll('.extra-item');
+  extraItems.forEach(item => {
+    item.addEventListener('mouseenter', function() {
+      this.style.borderLeftWidth = '8px';
+    });
+    
+    item.addEventListener('mouseleave', function() {
+      this.style.borderLeftWidth = '4px';
+    });
+  });
+  
+  // Skill items hover effect
+  const skillItems = document.querySelectorAll('.skill-item');
+  skillItems.forEach(item => {
+    const icon = item.querySelector('.skill-icon');
+    
+    item.addEventListener('mouseenter', function() {
+      icon.style.transform = 'scale(1.2)';
+    });
+    
+    item.addEventListener('mouseleave', function() {
+      icon.style.transform = 'scale(1)';
+    });
+  });
+}
+
+// Add animations for buttons
+document.querySelectorAll('.btn-primary, .btn-secondary').forEach(btn => {
+  btn.addEventListener('click', function() {
+    this.classList.add('clicked');
+    setTimeout(() => {
+      this.classList.remove('clicked');
+    }, 300);
   });
 });

@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Name - Resume</title>
+  <title>Marcell Szokedencsi - Resume</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
   <div id="intro" class="active">
     <div class="intro-content">
-      <h1>Your Name</h1>
-      <p class="tagline">Web Developer & Designer</p>
+      <h1>Marcell Szokedencsi</h1>
+      <p class="tagline">Artificial Intelligence Student</p>
       <button id="enter-btn" class="btn-primary">View My Resume <i class="fas fa-arrow-right"></i></button>
     </div>
   </div>
@@ -19,12 +19,14 @@
   <main id="resume" class="hidden">
     <header>
       <div class="container">
-        <h1>Your Name</h1>
+        <h1>Marcell Szokedencsi</h1>
         <nav>
           <ul>
             <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#skills">Skills</a></li>
+            <li><a href="#extra">Extracurriculars</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
@@ -43,11 +45,37 @@
             <div class="profile-placeholder"></div>
           </div>
           <div class="about-text">
-            <p>Hello! I'm a passionate web developer with a keen eye for design and a love for creating intuitive, responsive websites. I specialize in front-end development but am constantly expanding my skills across the full stack.</p>
-            <p>When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or enjoying the outdoors.</p>
+            <p>Hello! I'm a student at the University of Groningen pursuing a Bachelor's degree in Artificial Intelligence. I'm passionate about developing intelligent systems and software solutions.</p>
+            <p>With a strong foundation in Python programming and data structures, I'm constantly expanding my knowledge in machine learning, data analysis, and software development.</p>
             <div class="about-buttons">
               <a href="#contact" class="btn-primary">Contact Me</a>
               <a href="#" class="btn-secondary" download>Download CV</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="section">
+      <div class="container">
+        <h2 class="section-title">Education</h2>
+        <div class="education-content">
+          <div class="education-item">
+            <div class="education-header">
+              <h3>University of Groningen</h3>
+              <span class="education-date">Expected 2026</span>
+            </div>
+            <p class="education-degree">Bachelor in Artificial Intelligence</p>
+            <p class="education-location">Groningen, Netherlands</p>
+            <div class="coursework">
+              <h4>Relevant Coursework:</h4>
+              <ul>
+                <li>Data Structures and Algorithms (Python)</li>
+                <li>Statistics (R)</li>
+                <li>Object-Oriented Programming (Python)</li>
+                <li>Linear Algebra and Multivariable Calculus</li>
+                <li>Calculus I</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -60,32 +88,35 @@
         <div class="projects-grid">
           <div class="project-card">
             <div class="project-content">
-              <h3>Project Title</h3>
-              <p>Short description of the project, highlighting key features and your role in its development.</p>
+              <h3>Text-Based RPG Development</h3>
+              <p>Designed and implemented a Python-based text RPG, demonstrating advanced proficiency in object-oriented programming principles such as encapsulation, inheritance, and polymorphism. Developed core features including a modular inventory system, interactive NPCs, a robust combat mechanism, and state management with save/load functionality using JSON. Collaborated using GitHub for version control, ensuring clean code practices and maintainability.</p>
               <div class="project-tags">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
+                <span>Python</span>
+                <span>OOP</span>
+                <span>JSON</span>
+                <span>GitHub</span>
               </div>
               <div class="project-links">
-                <a href="#" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+                <a href="https://github.com/Marci0309" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
               </div>
             </div>
           </div>
           
           <div class="project-card">
             <div class="project-content">
-              <h3>Project Title</h3>
-              <p>Short description of the project, highlighting key features and your role in its development.</p>
+              <h3>AutoML Library Development</h3>
+              <p>Developed a Python-based AutoML library with a user-friendly Streamlit interface, enabling seamless dataset management, pipeline configuration, and model training. Implemented modular pipelines for preprocessing, training, and evaluation, with artifact management for reproducibility. Applied advanced OOP principles, including inheritance and encapsulation, to create maintainable, scalable, and efficient code.</p>
               <div class="project-tags">
-                <span>React</span>
-                <span>Node.js</span>
-                <span>MongoDB</span>
+                <span>Python</span>
+                <span>PyTorch</span>
+                <span>pandas</span>
+                <span>numpy</span>
+                <span>scikit-learn</span>
+                <span>seaborn</span>
+                <span>matplotlib</span>
               </div>
               <div class="project-links">
-                <a href="#" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+                <a href="https://github.com/Marci0309" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
               </div>
             </div>
           </div>
@@ -95,40 +126,113 @@
 
     <section id="skills" class="section">
       <div class="container">
-        <h2 class="section-title">Skills & Certificates</h2>
+        <h2 class="section-title">Technical Skills</h2>
         <div class="skills-content">
           <div class="skills-category">
-            <h3>Technical Skills</h3>
+            <h3>Programming & Technologies</h3>
             <div class="skills-grid">
               <div class="skill-item">
-                <div class="skill-icon"><i class="fab fa-html5"></i></div>
-                <p>HTML5</p>
+                <div class="skill-icon"><i class="fab fa-python"></i></div>
+                <p>Python</p>
               </div>
               <div class="skill-item">
-                <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
-                <p>CSS3</p>
+                <div class="skill-icon"><i class="fas fa-database"></i></div>
+                <p>SQL</p>
               </div>
               <div class="skill-item">
-                <div class="skill-icon"><i class="fab fa-js"></i></div>
-                <p>JavaScript</p>
+                <div class="skill-icon"><i class="fab fa-r-project"></i></div>
+                <p>R</p>
               </div>
               <div class="skill-item">
-                <div class="skill-icon"><i class="fab fa-react"></i></div>
-                <p>React</p>
+                <div class="skill-icon"><i class="fas fa-calculator"></i></div>
+                <p>MATLAB</p>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
+                <p>Git</p>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon"><i class="fab fa-github"></i></div>
+                <p>GitHub</p>
               </div>
             </div>
           </div>
-          <div class="certifications">
-            <h3>Certifications</h3>
-            <ul class="cert-list">
-              <li>
-                <i class="fas fa-certificate"></i>
-                <span>Web Development Certificate - Institution Name (2023)</span>
-              </li>
-              <li>
-                <i class="fas fa-certificate"></i>
-                <span>JavaScript Advanced Concepts - Platform Name (2022)</span>
-              </li>
+          
+          <div class="skills-category">
+            <h3>Frameworks & Libraries</h3>
+            <div class="skills-grid">
+              <div class="skill-item">
+                <div class="skill-icon"><i class="fas fa-brain"></i></div>
+                <p>TensorFlow</p>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon"><i class="fas fa-fire"></i></div>
+                <p>PyTorch</p>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
+                <p>scikit-learn</p>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon"><i class="fas fa-table"></i></div>
+                <p>Pandas</p>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon"><i class="fas fa-calculator"></i></div>
+                <p>NumPy</p>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon"><i class="fas fa-chart-bar"></i></div>
+                <p>Matplotlib</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="skills-category">
+            <h3>Development & Tools</h3>
+            <div class="skills-grid">
+              <div class="skill-item">
+                <div class="skill-icon"><i class="fas fa-code"></i></div>
+                <p>VSCode</p>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon"><i class="fas fa-file-code"></i></div>
+                <p>Jupyter</p>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon"><i class="fas fa-server"></i></div>
+                <p>SSMS</p>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon"><i class="fas fa-laptop-code"></i></div>
+                <p>Streamlit</p>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon"><i class="fas fa-object-group"></i></div>
+                <p>OOP</p>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon"><i class="fas fa-check-circle"></i></div>
+                <p>Testing</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="extra" class="section">
+      <div class="container">
+        <h2 class="section-title">Extracurriculars</h2>
+        <div class="extra-content">
+          <div class="extra-item">
+            <h3>Member, Study Association Cover</h3>
+            <p class="extra-date">September 2023 - Present</p>
+            <p class="extra-location">University of Groningen, Netherlands</p>
+            <ul class="extra-details">
+              <li>Engaged in activities organized by Cover, the study association for Artificial Intelligence and Computing Science students at the University of Groningen.</li>
+              <li>Participated in social events, study support lectures, and career-oriented workshops to enhance academic and professional development.</li>
+              <li>Contributed to the association's initiatives aimed at fostering a collaborative and supportive community among students.</li>
             </ul>
           </div>
         </div>
@@ -141,16 +245,20 @@
         <div class="contact-content">
           <div class="contact-info">
             <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <a href="tel:+31614352570">+31 6 14352570</a>
+            </div>
+            <div class="contact-item">
               <i class="fas fa-envelope"></i>
-              <a href="mailto:your.email@example.com">your.email@example.com</a>
+              <a href="mailto:szokedencsi@gmail.com">szokedencsi@gmail.com</a>
             </div>
             <div class="contact-item">
               <i class="fab fa-linkedin"></i>
-              <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">linkedin.com/in/yourprofile</a>
+              <a href="https://linkedin.com/in/marcell-szokedencsi" target="_blank" rel="noopener noreferrer">linkedin.com/in/marcell-szokedencsi</a>
             </div>
             <div class="contact-item">
               <i class="fab fa-github"></i>
-              <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">github.com/yourusername</a>
+              <a href="https://github.com/Marci0309" target="_blank" rel="noopener noreferrer">github.com/Marci0309</a>
             </div>
           </div>
         </div>
@@ -159,11 +267,10 @@
 
     <footer>
       <div class="container">
-        <p>&copy; 2023 Your Name. All rights reserved.</p>
+        <p>&copy; 2023 Marcell Szokedencsi. All rights reserved.</p>
         <div class="social-icons">
-          <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
-          <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
-          <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+          <a href="https://github.com/Marci0309" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/marcell-szokedencsi" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
         </div>
       </div>
     </footer>
