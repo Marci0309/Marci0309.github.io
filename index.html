@@ -5,59 +5,169 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Your Name - Resume</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <header>
-    <h1>Your Name</h1>
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#certificates">Certificates & Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <section id="about">
-    <h2>About Me</h2>
-    <p>A brief introduction about who you are and what you do.</p>
-  </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>Project Title</h3>
-      <p>Short description of the project.</p>
-      <a href="https://github.com/yourusername/project">View on GitHub</a>
+  <div id="intro" class="active">
+    <div class="intro-content">
+      <h1>Your Name</h1>
+      <p class="tagline">Web Developer & Designer</p>
+      <button id="enter-btn" class="btn-primary">View My Resume <i class="fas fa-arrow-right"></i></button>
     </div>
-    <!-- Repeat similar blocks for more projects -->
-  </section>
+  </div>
 
-  <section id="certificates">
-    <h2>Certificates & Skills</h2>
-    <ul>
-      <li>Certificate 1</li>
-      <li>Certificate 2</li>
-      <!-- Add more certificates as needed -->
-    </ul>
-    <h3>Skills</h3>
-    <ul>
-      <li>HTML/CSS</li>
-      <li>JavaScript</li>
-      <!-- List additional skills -->
-    </ul>
-  </section>
+  <main id="resume" class="hidden">
+    <header>
+      <div class="container">
+        <h1>Your Name</h1>
+        <nav>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <button id="theme-toggle" aria-label="Toggle dark/light mode">
+          <i class="fas fa-moon"></i>
+        </button>
+      </div>
+    </header>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank">yourprofile</a></p>
-  </section>
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+          <div class="about-image">
+            <!-- Replace with your actual image -->
+            <div class="profile-placeholder"></div>
+          </div>
+          <div class="about-text">
+            <p>Hello! I'm a passionate web developer with a keen eye for design and a love for creating intuitive, responsive websites. I specialize in front-end development but am constantly expanding my skills across the full stack.</p>
+            <p>When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or enjoying the outdoors.</p>
+            <div class="about-buttons">
+              <a href="#contact" class="btn-primary">Contact Me</a>
+              <a href="#" class="btn-secondary" download>Download CV</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <footer>
-    <p>&copy; 2025 Your Name</p>
-  </footer>
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-content">
+              <h3>Project Title</h3>
+              <p>Short description of the project, highlighting key features and your role in its development.</p>
+              <div class="project-tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+              <div class="project-links">
+                <a href="#" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-card">
+            <div class="project-content">
+              <h3>Project Title</h3>
+              <p>Short description of the project, highlighting key features and your role in its development.</p>
+              <div class="project-tags">
+                <span>React</span>
+                <span>Node.js</span>
+                <span>MongoDB</span>
+              </div>
+              <div class="project-links">
+                <a href="#" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="container">
+        <h2 class="section-title">Skills & Certificates</h2>
+        <div class="skills-content">
+          <div class="skills-category">
+            <h3>Technical Skills</h3>
+            <div class="skills-grid">
+              <div class="skill-item">
+                <div class="skill-icon"><i class="fab fa-html5"></i></div>
+                <p>HTML5</p>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
+                <p>CSS3</p>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon"><i class="fab fa-js"></i></div>
+                <p>JavaScript</p>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon"><i class="fab fa-react"></i></div>
+                <p>React</p>
+              </div>
+            </div>
+          </div>
+          <div class="certifications">
+            <h3>Certifications</h3>
+            <ul class="cert-list">
+              <li>
+                <i class="fas fa-certificate"></i>
+                <span>Web Development Certificate - Institution Name (2023)</span>
+              </li>
+              <li>
+                <i class="fas fa-certificate"></i>
+                <span>JavaScript Advanced Concepts - Platform Name (2022)</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section-title">Contact Me</h2>
+        <div class="contact-content">
+          <div class="contact-info">
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:your.email@example.com">your.email@example.com</a>
+            </div>
+            <div class="contact-item">
+              <i class="fab fa-linkedin"></i>
+              <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">linkedin.com/in/yourprofile</a>
+            </div>
+            <div class="contact-item">
+              <i class="fab fa-github"></i>
+              <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">github.com/yourusername</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2023 Your Name. All rights reserved.</p>
+        <div class="social-icons">
+          <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+          <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+          <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </footer>
+  </main>
 
   <script src="script.js"></script>
 </body>
