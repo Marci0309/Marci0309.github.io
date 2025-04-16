@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Marcell Szokedencsi</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <main id="resume" class="active">
+    <header>
+      <div class="container">
+        <h1>Marcell Szokedencsi</h1>
+        <nav>
+          <ul>
+            <li><a href="../index.html">About</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="extra.html">Extracurriculars</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <button id="theme-toggle" aria-label="Toggle dark/light mode">
+          <i class="fas fa-moon"></i>
+        </button>
+      </div>
+    </header>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section-title">Contact Me</h2>
+        <div class="contact-content">
+          <div class="contact-info">
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <a href="tel:+31614352570">+31 6 14352570</a>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:szokedencsi@gmail.com">szokedencsi@gmail.com</a>
+            </div>
+            <div class="contact-item">
+              <i class="fab fa-linkedin"></i>
+              <a href="https://linkedin.com/in/marcell-szokedencsi" target="_blank" rel="noopener noreferrer">linkedin.com/in/marcell-szokedencsi</a>
+            </div>
+            <div class="contact-item">
+              <i class="fab fa-github"></i>
+              <a href="https://github.com/Marci0309" target="_blank" rel="noopener noreferrer">github.com/Marci0309</a>
+            </div>
+          </div>
+          <div class="contact-form-section">
+            <h3>Send Me a Message</h3>
+            <form class="contact-form" id="contact-form">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+              </div>
+              <div class="form-message" id="form-message" style="display: none;">
+                <p>Your email client will open with a pre-populated message. Just hit send!</p>
+              </div>
+              <button type="submit" class="btn-primary">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2023 Marcell Szokedencsi. All rights reserved.</p>
+        <div class="social-icons">
+          <a href="https://github.com/Marci0309" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/marcell-szokedencsi" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="../script.js"></script>
+  <script src="common.js"></script>
+  <script src="contact.js"></script>
+</body>
+</html> 
