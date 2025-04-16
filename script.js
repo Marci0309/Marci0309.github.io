@@ -1,14 +1,9 @@
 // script.js
-console.log('Your resume website is loaded');
+console.log('Your portfolio website is loaded');
 
 // DOM Elements
-const introSection = document.getElementById('intro');
-const resumeSection = document.getElementById('resume');
 const themeToggle = document.getElementById('theme-toggle');
 const themeIcon = themeToggle ? themeToggle.querySelector('i') : null;
-
-// Check for intro and enter button on main page only
-const enterButton = document.getElementById('enter-btn');
 
 // Handle theme preference with localStorage
 function initTheme() {
@@ -37,50 +32,14 @@ function initTheme() {
   }
 }
 
-// Initialize the page with animations
+// Initialize the page
 document.addEventListener('DOMContentLoaded', function() {
   // Initialize theme
   initTheme();
   
-  // Main page intro animation
-  if (introSection) {
-    introSection.classList.add('active');
-  }
-  
-  // If this is a subpage, make sure the resume section is visible and active
-  if (!introSection && resumeSection) {
-    resumeSection.classList.remove('hidden');
-    resumeSection.classList.add('active');
-  }
-  
   // Setup interactive elements
   setupInteractiveElements();
 });
-
-// Enter button click - transition from intro to resume (only on main page)
-if (enterButton) {
-  enterButton.addEventListener('click', function() {
-    // Add animation class to button
-    this.classList.add('clicked');
-    
-    // Hide intro section
-    introSection.classList.remove('active');
-    introSection.classList.add('hidden');
-    
-    // Show resume section
-    setTimeout(function() {
-      resumeSection.classList.remove('hidden');
-      setTimeout(function() {
-        resumeSection.classList.add('active');
-      }, 100);
-    }, 500);
-    
-    // Remove clicked class after animation
-    setTimeout(() => {
-      enterButton.classList.remove('clicked');
-    }, 300);
-  });
-}
 
 // Theme toggle
 if (themeToggle) {
@@ -132,9 +91,9 @@ function setupInteractiveElements() {
     });
   });
   
-  // Extra items hover effect
-  const extraItems = document.querySelectorAll('.extra-item');
-  extraItems.forEach(item => {
+  // Experience items hover effect
+  const experienceItems = document.querySelectorAll('.experience-item');
+  experienceItems.forEach(item => {
     item.addEventListener('mouseenter', function() {
       this.style.borderLeftWidth = '8px';
     });
@@ -144,17 +103,39 @@ function setupInteractiveElements() {
     });
   });
   
-  // Skill items hover effect
-  const skillItems = document.querySelectorAll('.skill-item');
-  skillItems.forEach(item => {
-    const icon = item.querySelector('.skill-icon');
+  // Skill cards hover effect
+  const skillCards = document.querySelectorAll('.skill-card');
+  skillCards.forEach(card => {
+    card.addEventListener('mouseenter', function() {
+      this.style.transform = 'translateY(-5px)';
+    });
     
+    card.addEventListener('mouseleave', function() {
+      this.style.transform = 'translateY(0)';
+    });
+  });
+  
+  // Achievement cards hover effect
+  const achievementCards = document.querySelectorAll('.achievement-card');
+  achievementCards.forEach(card => {
+    card.addEventListener('mouseenter', function() {
+      this.style.transform = 'translateY(-5px)';
+    });
+    
+    card.addEventListener('mouseleave', function() {
+      this.style.transform = 'translateY(0)';
+    });
+  });
+  
+  // Certification items hover effect
+  const certificationItems = document.querySelectorAll('.certification-item');
+  certificationItems.forEach(item => {
     item.addEventListener('mouseenter', function() {
-      icon.style.transform = 'scale(1.2)';
+      this.style.transform = 'translateY(-5px)';
     });
     
     item.addEventListener('mouseleave', function() {
-      icon.style.transform = 'scale(1)';
+      this.style.transform = 'translateY(0)';
     });
   });
   

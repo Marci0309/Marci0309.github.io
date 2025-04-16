@@ -28,9 +28,15 @@
       </div>
     </header>
 
-    <section id="contact" class="section">
+    <section id="contact-header" class="section">
       <div class="container">
-        <h2 class="section-title">Contact Me</h2>
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-subtitle">Feel free to reach out to me using any of the methods below. I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
+      </div>
+    </section>
+
+    <section id="contact-info" class="section">
+      <div class="container">
         <div class="contact-content">
           <div class="contact-info">
             <div class="contact-item">
@@ -52,13 +58,13 @@
           </div>
           <div class="contact-form-section">
             <h3>Send Me a Message</h3>
-            <form class="contact-form" id="contact-form">
+            <form id="contact-form" action="#" method="POST">
               <div class="form-group">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" required>
               </div>
               <div class="form-group">
-                <label for="email">Your Email</label>
+                <label for="email">Email</label>
                 <input type="email" id="email" name="email" required>
               </div>
               <div class="form-group">
@@ -69,11 +75,9 @@
                 <label for="message">Message</label>
                 <textarea id="message" name="message" rows="5" required></textarea>
               </div>
-              <div class="form-message" id="form-message" style="display: none;">
-                <p>Your email client will open with a pre-populated message. Just hit send!</p>
-              </div>
               <button type="submit" class="btn-primary">Send Message</button>
             </form>
+            <div id="form-message" class="form-message"></div>
           </div>
         </div>
       </div>
@@ -93,5 +97,30 @@
   <script src="../script.js"></script>
   <script src="common.js"></script>
   <script src="contact.js"></script>
+  <script>
+    // Simple form handling (for demonstration purposes)
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Get form values
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const subject = document.getElementById('subject').value;
+      const message = document.getElementById('message').value;
+      
+      // Display success message (in a real application, you would send this data to a server)
+      const formMessage = document.getElementById('form-message');
+      formMessage.innerHTML = '<p>Thanks for your message! I\'ll get back to you soon.</p>';
+      formMessage.style.display = 'block';
+      
+      // Reset form
+      this.reset();
+      
+      // Hide message after 5 seconds
+      setTimeout(() => {
+        formMessage.style.display = 'none';
+      }, 5000);
+    });
+  </script>
 </body>
 </html> 

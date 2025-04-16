@@ -1,14 +1,14 @@
 /* style.css */
 /* General CSS Variables for theming */
 :root {
-  --primary-color: #4a89dc;
-  --primary-dark: #3b6fc6;
-  --secondary-color: #8e44ad;
-  --background-light: #f9f9f9;
+  --primary-color: #00897b;
+  --primary-dark: #005b4f;
+  --secondary-color: #ff6f00;
+  --background-light: #f5f5f5;
   --text-light: #333;
   --text-muted: #777;
   --card-bg-light: #fff;
-  --border-light: #eaeaea;
+  --border-light: #e0e0e0;
   --shadow-light: 0 5px 15px rgba(0,0,0,0.05);
   
   /* Dark mode variables */
@@ -460,33 +460,42 @@ body.dark-mode .skills-category h3 {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
 }
 
-.skill-item {
+.skill-card {
   background-color: var(--card-bg-light);
   border-radius: 8px;
-  padding: 1.5rem 1rem;
-  text-align: center;
   box-shadow: var(--shadow-light);
-  transition: box-shadow 0.3s ease, background-color var(--transition-speed);
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color var(--transition-speed);
 }
 
-body.dark-mode .skill-item {
+body.dark-mode .skill-card {
   background-color: var(--card-bg-dark);
   box-shadow: var(--shadow-dark);
 }
 
-.skill-icon {
-  font-size: 2rem;
-  color: var(--primary-color);
-  margin-bottom: 1rem;
-  transition: transform 0.3s ease;
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
-.skill-item p {
-  font-weight: 500;
+.skill-card h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.75rem;
+  font-size: 1.2rem;
+}
+
+.skill-card p {
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+body.dark-mode .skill-card p {
+  color: var(--text-muted-dark);
 }
 
 /* Extracurricular activities section */
@@ -812,5 +821,241 @@ body.dark-mode .social-icons a {
   header nav ul li {
     margin: 0.5rem 0;
   }
+}
+
+/* Hero Section */
+#hero {
+  padding: 80px 0;
+  background-color: var(--background-light);
+  transition: background-color var(--transition-speed);
+}
+
+body.dark-mode #hero {
+  background-color: var(--background-dark);
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: var(--text-muted);
+}
+
+body.dark-mode .hero-subtitle {
+  color: var(--text-muted-dark);
+}
+
+.hero-buttons {
+  margin-top: 2rem;
+}
+
+/* Achievements */
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.achievement-card {
+  background-color: var(--card-bg-light);
+  border-radius: 8px;
+  box-shadow: var(--shadow-light);
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color var(--transition-speed);
+}
+
+body.dark-mode .achievement-card {
+  background-color: var(--card-bg-dark);
+  box-shadow: var(--shadow-dark);
+}
+
+.achievement-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.achievement-number {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.achievement-text {
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+body.dark-mode .achievement-text {
+  color: var(--text-muted-dark);
+}
+
+/* Projects Page */
+.section-subtitle {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  color: var(--text-muted);
+}
+
+body.dark-mode .section-subtitle {
+  color: var(--text-muted-dark);
+}
+
+#projects-showcase {
+  padding-top: 0;
+}
+
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+body.dark-mode .project-card:hover {
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+/* About Page */
+.about-facts {
+  margin-top: 2rem;
+}
+
+.facts-list {
+  list-style: none;
+  padding: 0;
+}
+
+.facts-list li {
+  margin-bottom: 0.75rem;
+  color: var(--text-muted);
+}
+
+body.dark-mode .facts-list li {
+  color: var(--text-muted-dark);
+}
+
+.facts-list i {
+  color: var(--primary-color);
+  width: 25px;
+  margin-right: 0.5rem;
+}
+
+/* Experience Section */
+.experience-content {
+  margin-top: 2rem;
+}
+
+.experience-item {
+  background-color: var(--card-bg-light);
+  border-radius: 8px;
+  box-shadow: var(--shadow-light);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid var(--primary-color);
+  transition: border-left-width 0.3s ease, background-color var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+body.dark-mode .experience-item {
+  background-color: var(--card-bg-dark);
+  box-shadow: var(--shadow-dark);
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.experience-date {
+  color: var(--primary-color);
+  font-size: 0.9rem;
+}
+
+.experience-company {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.experience-location {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+body.dark-mode .experience-location {
+  color: var(--text-muted-dark);
+}
+
+.experience-details {
+  padding-left: 1.5rem;
+}
+
+.experience-details li {
+  margin-bottom: 0.5rem;
+}
+
+/* Certifications Section */
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.certification-item {
+  background-color: var(--card-bg-light);
+  border-radius: 8px;
+  box-shadow: var(--shadow-light);
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color var(--transition-speed);
+}
+
+body.dark-mode .certification-item {
+  background-color: var(--card-bg-dark);
+  box-shadow: var(--shadow-dark);
+}
+
+.certification-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.certification-item h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.75rem;
+}
+
+.certification-issuer, .certification-date {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+body.dark-mode .certification-issuer, 
+body.dark-mode .certification-date {
+  color: var(--text-muted-dark);
+}
+
+/* Contact Page */
+#contact-header {
+  text-align: center;
 }
     
