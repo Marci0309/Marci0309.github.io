@@ -1,92 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcell Szokedencsi - Resume</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1>Your Name</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="pages/projects.html">Projects</a></li>
-          <li><a href="pages/about.html">About</a></li>
-          <li><a href="pages/contact.html">Contact</a></li>
-        </ul>
-      </nav>
-      <button id="theme-toggle" aria-label="Toggle dark/light mode">
-        <i class="fas fa-moon"></i>
-      </button>
-    </div>
-  </header>
+    <header>
+        <nav>
+            <div class="logo"><a href="index.html">MS</a></div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <section id="hero" class="section">
-    <div class="container">
-      <div class="hero-content">
-        <h2 class="hero-title">Welcome to My<br>Programming Portfolio</h2>
-        <p class="hero-subtitle">Explore my projects and discover my skills in coding and software development.</p>
-        <div class="hero-buttons">
-          <a href="pages/projects.html" class="btn-primary">View Projects</a>
+    <section class="hero" id="home">
+        <div id="particles-js" class="particles-js"></div>
+        <div class="profile-container" data-aos="fade-up">
+            <img src="profile-photo.jpeg" alt="Marcell Szokedencsi" class="profile-photo float-animation">
+            <h1 class="glitch" data-text="Marcell Szokedencsi">Marcell Szokedencsi</h1>
+            <p class="subtitle">Bachelor in Artificial Intelligence</p>
+            <div class="typed-container">
+                <span id="typed-output"></span>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="featured-skills" class="section">
-    <div class="container">
-      <h2 class="section-title">Featured Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-card">
-          <h3>Programming Languages</h3>
-          <p>Python, R, SQL, MATLAB</p>
+    <section class="featured-skills" id="skills">
+        <h2 data-aos="fade-up">Featured Skills</h2>
+        <div class="underline" data-aos="fade-up"></div>
+        
+        <div class="skills-container">
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="skill-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3>Programming Languages</h3>
+                <p>Python, SQL, R, MATLAB</p>
+            </div>
+            
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="skill-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3>ML & Data Tools</h3>
+                <p>TensorFlow, PyTorch, scikit-learn, Pandas, NumPy</p>
+            </div>
+            
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="skill-icon">
+                    <i class="fas fa-bug"></i>
+                </div>
+                <h3>Testing & Debugging</h3>
+                <p>Unit Testing, Integration Testing, Flake8</p>
+            </div>
+            
+            <div class="skill-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="skill-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <h3>Development Tools</h3>
+                <p>Git, GitHub, VSCode, Jupyter Notebook, SSMS, Streamlit</p>
+            </div>
         </div>
-        <div class="skill-card">
-          <h3>ML & Data Tools</h3>
-          <p>TensorFlow, PyTorch, Scikit-learn, Keras, NumPy, Pandas, Matplotlib, Seaborn</p>
-        </div>
-        <div class="skill-card">
-          <h3>Testing & Debugging</h3>
-          <p>Unit Testing, Integration Testing, Debugging with PyCharm and VSCode</p>
-        </div>
-        <div class="skill-card">
-          <h3>Soft Skills</h3>
-          <p>Problem-solving, Leadership, Communication, Multicultural</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="achievements" class="section">
-    <div class="container">
-      <h2 class="section-title">My Achievements</h2>
-      <div class="achievements-grid">
-        <div class="achievement-card">
-          <div class="achievement-number">12</div>
-          <div class="achievement-text">Projects Completed</div>
+    <section class="achievements" id="achievements">
+        <h2 data-aos="fade-up">My Achievements</h2>
+        <div class="underline" data-aos="fade-up"></div>
+        
+        <div class="achievements-container">
+            <div class="achievement-card" data-aos="fade-right">
+                <div class="achievement-icon">
+                    <i class="fas fa-project-diagram"></i>
+                </div>
+                <h3 class="achievement-number counter" data-count="3">0</h3>
+                <p>Projects Completed</p>
+            </div>
+            
+            <div class="achievement-card" data-aos="fade-left">
+                <div class="achievement-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3 class="achievement-number counter" data-count="2026">0</h3>
+                <p>Expected Graduation Year</p>
+            </div>
         </div>
-        <div class="achievement-card">
-          <div class="achievement-number">3</div>
-          <div class="achievement-text">Years of Experience in coding</div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo"><a href="index.html">MS</a></div>
+            <p>&copy; 2024 Marcell Szokedencsi. All rights reserved.</p>
+            <div class="footer-social">
+                <a href="https://github.com/Marci0309" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/marcell-szokedencsi" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </footer>
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2023 Your Name. All rights reserved.</p>
-      <div class="social-icons">
-        <a href="https://github.com/yourgithub" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com/in/yourlinkedin" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
-      </div>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="js/script.js"></script>
 </body>
-</html>
+</html> 

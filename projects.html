@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Marcell Szokedencsi</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><a href="index.html">MS</a></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="projects-hero" id="projects-top">
+        <div id="particles-js" class="particles-js"></div>
+        <div class="projects-hero-content" data-aos="fade-up">
+            <h1 class="glitch" data-text="My Projects">My Projects</h1>
+            <div class="underline"></div>
+            <p class="projects-subtitle">Showcasing my technical skills and problem-solving abilities</p>
+        </div>
+    </section>
+
+    <section class="projects-container">
+        <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="project-icon">
+                <i class="fas fa-gamepad"></i>
+            </div>
+            <div class="project-header">
+                <h3>Text-Based RPG Development</h3>
+                <div class="project-tech-badges">
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">OOP</span>
+                    <span class="tech-badge">JSON</span>
+                    <span class="tech-badge">GitHub</span>
+                </div>
+            </div>
+            <div class="project-content">
+                <p class="project-description">
+                    Designed and implemented a Python-based text RPG, demonstrating advanced proficiency in 
+                    object-oriented programming principles such as encapsulation, inheritance, and polymorphism. Developed 
+                    core features including a modular inventory system, interactive NPCs, a robust combat mechanism, and 
+                    state management with save/load functionality using JSON. Collaborated using GitHub for version 
+                    control, ensuring clean code practices and maintainability.
+                </p>
+                <div class="project-features">
+                    <h4>Key Features</h4>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Modular inventory system</li>
+                        <li><i class="fas fa-check-circle"></i> Interactive NPCs with dialogue trees</li>
+                        <li><i class="fas fa-check-circle"></i> Dynamic combat system</li>
+                        <li><i class="fas fa-check-circle"></i> Save/load game state using JSON</li>
+                    </ul>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/Marci0309/text-based-RPG" class="btn btn-primary" target="_blank">
+                        <i class="fab fa-github"></i> View Repository
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card" data-aos="fade-up" data-aos-delay="150">
+            <div class="project-icon">
+                <i class="fas fa-home"></i>
+            </div>
+            <div class="project-header">
+                <h3>Real Estate Price Prediction</h3>
+                <div class="project-tech-badges">
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">Pandas</span>
+                    <span class="tech-badge">NumPy</span>
+                    <span class="tech-badge">scikit-learn</span>
+                    <span class="tech-badge">Matplotlib</span>
+                    <span class="tech-badge">Data Cleaning</span>
+                    <span class="tech-badge">ML Regression</span>
+                </div>
+            </div>
+            <div class="project-content">
+                <p class="project-description">
+                    Designed and developed a real estate price prediction pipeline using machine learning techniques in Python. 
+                    The project focused on preprocessing a Dutch property dataset, extracting and cleaning structured 
+                    information, and training predictive models. Visualized data relationships and distributions to derive insights 
+                    into price behavior, and evaluated multiple regression models for performance comparison. Ensured model 
+                    reliability through hyperparameter tuning and outlier removal.
+                </p>
+                <div class="project-features">
+                    <h4>Key Features</h4>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Extensive data cleaning and feature extraction</li>
+                        <li><i class="fas fa-check-circle"></i> Visual data analysis using scatter plots and histograms</li>
+                        <li><i class="fas fa-check-circle"></i> Regression models: Linear, Decision Tree, Random Forest (with tuning)</li>
+                        <li><i class="fas fa-check-circle"></i> Model evaluation with MSE and R² metrics</li>
+                    </ul>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/Marci0309/NL-housing-price-prediction" class="btn btn-primary" target="_blank">
+                        <i class="fab fa-github"></i> View Repository
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="project-icon">
+                <i class="fas fa-robot"></i>
+            </div>
+            <div class="project-header">
+                <h3>AutoML Library Development</h3>
+                <div class="project-tech-badges">
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">Pydantic</span>
+                    <span class="tech-badge">Pandas</span>
+                    <span class="tech-badge">NumPy</span>
+                    <span class="tech-badge">scikit-learn</span>
+                    <span class="tech-badge">Seaborn</span>
+                    <span class="tech-badge">Matplotlib</span>
+                    <span class="tech-badge">Streamlit</span>
+                </div>
+            </div>
+            <div class="project-content">
+                <p class="project-description">
+                    Developed a Python-based AutoML library with a user-friendly Streamlit interface, enabling seamless 
+                    dataset management, pipeline configuration, and model training. Implemented modular pipelines for 
+                    preprocessing, training, and evaluation, with artifact management for reproducibility. Applied advanced 
+                    OOP principles, including inheritance and encapsulation, to create maintainable, scalable, and efficient 
+                    code.
+                </p>
+                <div class="project-features">
+                    <h4>Key Features</h4>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Streamlit-based user interface</li>
+                        <li><i class="fas fa-check-circle"></i> Modular pipeline architecture</li>
+                        <li><i class="fas fa-check-circle"></i> Comprehensive preprocessing capabilities</li>
+                        <li><i class="fas fa-check-circle"></i> Artifact management for reproducibility</li>
+                    </ul>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/Marci0309/auto-ML-Pipeline" class="btn btn-primary" target="_blank">
+                        <i class="fab fa-github"></i> View Repository
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section" data-aos="fade-up">
+        <div class="cta-content">
+            <h2>Interested in Collaboration?</h2>
+            <p>I'm always open to new opportunities and projects</p>
+            <a href="contact.html" class="btn btn-cta">Get In Touch</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo"><a href="index.html">MS</a></div>
+            <p>&copy; 2024 Marcell Szokedencsi. All rights reserved.</p>
+            <div class="footer-social">
+                <a href="https://github.com/Marci0309" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/marcell-szokedencsi" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html> 

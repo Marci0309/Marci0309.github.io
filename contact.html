@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - Marcell Szokedencsi</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+    <style>
+        .contact-logo {
+            width: 40px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><a href="index.html">MS</a></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contact-hero" id="contact-top">
+        <div id="particles-js" class="particles-js"></div>
+        <div class="contact-hero-content">
+            <h1 class="glitch" data-text="Get In Touch">Get In Touch</h1>
+            <div class="underline"></div>
+            <p class="contact-subtitle">Have a question or want to work together? I'd love to hear from you!</p>
+        </div>
+    </section>
+
+    <section class="contact-container">
+        <div class="contact-intro">
+            <p data-aos="fade-up">
+                I'm always open to new opportunities, collaborations, or just a friendly chat about 
+                technology and Artificial Intelligence. Feel free to reach out to me through any of the following channels:
+            </p>
+        </div>
+
+        <div class="contact-cards">
+            <div class="contact-card" data-aos="fade-up" data-aos-delay="100">
+                <a href="mailto:szokedencsi@gmail.com" class="contact-link">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <p>szokedencsi@gmail.com</p>
+                </a>
+                <div class="card-decoration"></div>
+            </div>
+
+            <div class="contact-card" data-aos="fade-up" data-aos-delay="200">
+                <a href="tel:+31614352570" class="contact-link">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>Phone</h3>
+                    <p>+31614352570</p>
+                </a>
+                <div class="card-decoration"></div>
+            </div>
+
+            <div class="contact-card" data-aos="fade-up" data-aos-delay="300">
+                <a href="https://linkedin.com/in/marcell-szokedencsi" target="_blank" class="contact-link">
+                    <div class="contact-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
+                    <h3>LinkedIn</h3>
+                    <p>Connect with me on LinkedIn</p>
+                </a>
+                <div class="card-decoration"></div>
+            </div>
+
+            <div class="contact-card" data-aos="fade-up" data-aos-delay="400">
+                <a href="https://github.com/Marci0309" target="_blank" class="contact-link">
+                    <div class="contact-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <h3>GitHub</h3>
+                    <p>Check out my projects on GitHub</p>
+                </a>
+                <div class="card-decoration"></div>
+            </div>
+        </div>
+
+        <div class="contact-form-section">
+            <div class="form-left" data-aos="fade-right">
+                <div class="section-header">
+                    <h2><i class="fas fa-paper-plane section-icon"></i> Send Me a Message</h2>
+                </div>
+                <p class="form-intro">
+                    Whether you have a question, want to discuss a potential project, or just want to say hello, I'm here to listen. Fill out the form and I'll get back to you as soon as possible.
+                </p>
+                <div class="location-box">
+                    <a href="https://www.google.com/maps/place/Groningen" target="_blank" class="contact-link">
+                        <h3><i class="fas fa-map-marker-alt"></i> Location</h3>
+                        <p>Groningen, Netherlands</p>
+                        <p class="availability">Currently studying at the University of Groningen</p>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="form-right" data-aos="fade-left">
+                <div class="contact-form-container">
+                    <h3>Send Me a Message</h3>
+                    <form id="contactForm" action="https://formspree.io/f/mjkydrrr" method="POST">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="name" name="name" placeholder=" " required>
+                            <label for="name">Your Name</label>
+                            <span class="error-message" id="nameError"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="email" name="email" placeholder=" " required>
+                            <label for="email">Your Email</label>
+                            <span class="error-message" id="emailError"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="subject" name="subject" placeholder=" " required>
+                            <label for="subject">Subject</label>
+                            <span class="error-message" id="subjectError"></span>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" id="message" name="message" rows="5" placeholder=" " required></textarea>
+                            <label for="message">Your Message</label>
+                            <span class="error-message" id="messageError"></span>
+                        </div>
+                        <div id="formSuccessMessage" class="alert alert-success d-none">
+                            <i class="fas fa-check-circle"></i> Your message has been sent successfully!
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2><i class="fas fa-file-alt"></i> View My Resume</h2>
+            <p>Download my resume to learn more about my education, skills, and experience.</p>
+            <a href="Resume (5).pdf" class="btn btn-cta" target="_blank">Download Resume <i class="fas fa-download"></i></a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo"><a href="index.html">MS</a></div>
+            <p>&copy; 2024 Marcell Szokedencsi. All rights reserved.</p>
+            <div class="footer-social">
+                <a href="https://github.com/Marci0309" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/marcell-szokedencsi" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html> 
